@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [RestAssured API Testing]">
+  <listeners>
+    <listener class-name="com.qa.ExtentListener.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="5" name="API Testing(failed)" parallel="classes">
+    <classes>
+      <class name="com.qa.tests.getSingleUserWithId">
+        <methods>
+          <include name="tearDown"/>
+          <include name="checkResponseBody"/>
+          <include name="getSingleUser"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.qa.tests.getSingleUserWithId -->
+      <class name="com.qa.tests.getAllEmpRecords">
+        <methods>
+          <include name="tearDown"/>
+          <include name="getAllEmployees"/>
+          <include name="setUp"/>
+          <include name="checkResponseBodyAll"/>
+        </methods>
+      </class> <!-- com.qa.tests.getAllEmpRecords -->
+    </classes>
+  </test> <!-- API Testing(failed) -->
+</suite> <!-- Failed suite [RestAssured API Testing] -->

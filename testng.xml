@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="RestAssured API Testing">
+<listeners>
+  <listener class-name="com.qa.ExtentListener.ExtentReporterNG"></listener>
+</listeners>
+
+  <test name="API Testing" parallel="classes" thread-count="2">
+  <classes>
+      <class name="com.qa.tests.getAllEmpRecords"/>
+      <class name="com.qa.tests.getSingleUserWithId"/>
+      
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
